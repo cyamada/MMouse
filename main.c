@@ -49,31 +49,6 @@ int main(void) {
 	setSysTick();
 	init_GPIO();
 
-int i=0;
-
-//Blink LED14 using Periph Driver functions
-	for(i=0; i<10; i++){
-		GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
-		Delay(1000);	// Wait 1 second
-	}
-
-//Blink LED13 using Periph Driver structures, NOT functions
-	for(i=0; i<10; i++){	
-		GPIOD->BSRRL = GPIO_Pin_13;
-		Delay(1000);
-		GPIOD->BSRRH = GPIO_Pin_13;
-		Delay(1000);
-	}
-
-// Blink LED12 using assembly functions
-	while(1){
-		turnOnLED(0x40020C00, 12);
-		Delay(1000);
-		turnOffLED(0x40020C00, 12);
-		Delay(1000);
-	}
-
-	return 0;
 }
 
 
