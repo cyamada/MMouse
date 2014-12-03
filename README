@@ -1,9 +1,2 @@
-Template for STM32F4 Development on the Mac OSX.
-The main.c file contains a basic example showing how
-to blink an LED.
-
-	build:
-		make
-
-	clean: 
-		make clean
+STM32F407 Discovery Board
+Most peripherals tested on mouse
